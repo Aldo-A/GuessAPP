@@ -1,15 +1,27 @@
 //
-//  Mainscreen.swift
+//  StartScreen.swift
 //  GuessRandom
 //
-//  Created by Aldo Almeida on 4/3/19.
+//  Created by Aldo Almeida on 4/4/19.
 //  Copyright © 2019 Life X. All rights reserved.
 //
 
 import UIKit
 
-class Mainscreen: UIViewController {
+class StartScreen: UIViewController {
 
+    
+    @IBAction func easyDiff(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "startGame", sender: self)
+    }
+    
+    @IBAction func medDiff(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "startGame", sender: self)
+    }
+    
+    @IBAction func hardDiff(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "startGame", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

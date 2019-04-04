@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		377CE089225552630040D1EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377CE088225552630040D1EF /* AppDelegate.swift */; };
-		377CE08B225552630040D1EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377CE08A225552630040D1EF /* ViewController.swift */; };
 		377CE08E225552630040D1EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377CE08C225552630040D1EF /* Main.storyboard */; };
 		377CE090225552640040D1EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377CE08F225552640040D1EF /* Assets.xcassets */; };
 		377CE093225552640040D1EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377CE091225552640040D1EF /* LaunchScreen.storyboard */; };
-		377CE09B225587400040D1EF /* Mainscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377CE09A225587400040D1EF /* Mainscreen.swift */; };
+		37DEB6CA22566E1900F182F5 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEB6C922566E1900F182F5 /* StartScreen.swift */; };
+		37DEB6CC225671A300F182F5 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEB6CB225671A300F182F5 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		377CE085225552630040D1EF /* GuessRandom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessRandom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		377CE088225552630040D1EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		377CE08A225552630040D1EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		377CE08D225552630040D1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		377CE08F225552640040D1EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		377CE092225552640040D1EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		377CE094225552640040D1EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		377CE09A225587400040D1EF /* Mainscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mainscreen.swift; sourceTree = "<group>"; };
+		37DEB6C922566E1900F182F5 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
+		37DEB6CB225671A300F182F5 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +56,13 @@
 		377CE087225552630040D1EF /* GuessRandom */ = {
 			isa = PBXGroup;
 			children = (
+				37DEB6C922566E1900F182F5 /* StartScreen.swift */,
 				377CE088225552630040D1EF /* AppDelegate.swift */,
-				377CE08A225552630040D1EF /* ViewController.swift */,
 				377CE08C225552630040D1EF /* Main.storyboard */,
 				377CE08F225552640040D1EF /* Assets.xcassets */,
 				377CE091225552640040D1EF /* LaunchScreen.storyboard */,
 				377CE094225552640040D1EF /* Info.plist */,
-				377CE09A225587400040D1EF /* Mainscreen.swift */,
+				37DEB6CB225671A300F182F5 /* Game.swift */,
 			);
 			path = GuessRandom;
 			sourceTree = "<group>";
@@ -138,9 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				377CE08B225552630040D1EF /* ViewController.swift in Sources */,
+				37DEB6CA22566E1900F182F5 /* StartScreen.swift in Sources */,
+				37DEB6CC225671A300F182F5 /* Game.swift in Sources */,
 				377CE089225552630040D1EF /* AppDelegate.swift in Sources */,
-				377CE09B225587400040D1EF /* Mainscreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
