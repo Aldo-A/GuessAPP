@@ -75,17 +75,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="ehL-rR-dn1" kind="presentation" identifier="startGame" id="tVY-8B-Met"/>
+                        <segue destination="ehL-rR-dn1" kind="presentation" identifier="hardScreen" id="tVY-8B-Met"/>
+                        <segue destination="AXD-u8-8cd" kind="presentation" identifier="mediumScreen" id="MJq-zb-hPn"/>
+                        <segue destination="WOq-yQ-i0r" kind="presentation" identifier="easyScreen" id="6kE-U7-vft"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-510" y="12"/>
+            <point key="canvasLocation" x="235" y="-854"/>
         </scene>
-        <!--Game-->
+        <!--Hard Game-->
         <scene sceneID="nwL-kn-4O0">
             <objects>
-                <viewController id="ehL-rR-dn1" customClass="Game" customModule="GuessRandom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ehL-rR-dn1" customClass="hardGame" customModule="GuessRandom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rwg-oL-Fcq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +99,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="backToStart:" destination="ehL-rR-dn1" eventType="touchUpInside" id="gg0-S8-TJb"/>
+                                    <action selector="backToStart:" destination="ehL-rR-dn1" eventType="touchUpInside" id="Sdo-uT-XdN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oo6-w3-wSy">
@@ -122,10 +124,97 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GbJ-sf-7M7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889.85507246376824" y="12.228260869565219"/>
+            <point key="canvasLocation" x="1155" y="99"/>
+        </scene>
+        <!--Medium Game-->
+        <scene sceneID="Wk7-av-zF1">
+            <objects>
+                <viewController id="AXD-u8-8cd" customClass="mediumGame" customModule="GuessRandom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JqS-FL-fWp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjt-Gc-sjc">
+                                <rect key="frame" x="20" y="20" width="34" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="⇦">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToStart:" destination="AXD-u8-8cd" eventType="touchUpInside" id="l3h-gb-aYc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvW-aS-DCC">
+                                <rect key="frame" x="154" y="505" width="107" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="35"/>
+                                <state key="normal" title="Guess">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yjt-Gc-sjc" firstAttribute="leading" secondItem="B79-vg-OtK" secondAttribute="leading" constant="20" id="H6C-av-0WB"/>
+                            <constraint firstItem="yjt-Gc-sjc" firstAttribute="top" secondItem="B79-vg-OtK" secondAttribute="top" id="uqp-gn-vZI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B79-vg-OtK"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToHome" id="NZY-cO-dxm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TUh-Fn-tfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234.78260869565219" y="98.641304347826093"/>
+        </scene>
+        <!--Easy Game-->
+        <scene sceneID="wXp-zJ-XE9">
+            <objects>
+                <viewController id="WOq-yQ-i0r" customClass="easyGame" customModule="GuessRandom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tPi-7t-Rn0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gv3-Zx-8vz">
+                                <rect key="frame" x="20" y="20" width="34" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="⇦">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToStart:" destination="WOq-yQ-i0r" eventType="touchUpInside" id="MRe-zF-BMt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbG-5s-xel">
+                                <rect key="frame" x="154" y="505" width="107" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="35"/>
+                                <state key="normal" title="Guess">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gv3-Zx-8vz" firstAttribute="leading" secondItem="gmw-Cm-xRm" secondAttribute="leading" constant="20" id="CdZ-3B-wJ7"/>
+                            <constraint firstItem="gv3-Zx-8vz" firstAttribute="top" secondItem="gmw-Cm-xRm" secondAttribute="top" id="djC-57-5rs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gmw-Cm-xRm"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToHome" id="U0u-hF-jUt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LXp-vg-I6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-681" y="99"/>
         </scene>
     </scenes>
     <resources>
         <image name="greyGray" width="615" height="461"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="g46-VR-RNW"/>
+    </inferredMetricsTieBreakers>
 </document>

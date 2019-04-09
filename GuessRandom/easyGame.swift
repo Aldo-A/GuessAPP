@@ -1,27 +1,19 @@
 //
-//  StartScreen.swift
+//  easyGame.swift
 //  GuessRandom
 //
-//  Created by Aldo Almeida on 4/4/19.
+//  Created by Aldo Almeida on 4/9/19.
 //  Copyright © 2019 Life X. All rights reserved.
 //
 
 import UIKit
 
-class StartScreen: UIViewController {
+class easyGame: UIViewController {
 
-    
-    @IBAction func easyDiff(_ sender: UIButton) { // #1-10 max 100
-        self.performSegue(withIdentifier: "easyScreen", sender: self)
+    @IBAction func backToStart(_ sender: UIButton) {
+        performSegue(withIdentifier: "backToHome", sender: self)
     }
     
-    @IBAction func medDiff(_ sender: UIButton) { //#1-20 max 100
-        self.performSegue(withIdentifier: "mediumScreen", sender: self)
-    }
-    
-    @IBAction func hardDiff(_ sender: UIButton) { //#1-30 max 100
-        self.performSegue(withIdentifier: "hardScreen", sender: self)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

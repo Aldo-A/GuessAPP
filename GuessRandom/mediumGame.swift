@@ -1,19 +1,21 @@
-///Users/aldoalmeida/Library/Autosave Information/GuessRandom/GuessRandom/StartScreen.swift
-//  Game.swift/Users/aldoalmeida/Library/Autosave Information/GuessRandom/GuessRandom/StartScreen.swift
+//
+//  mediumGame.swift
 //  GuessRandom
 //
-//  Created by Aldo Almeida on 4/4/19.
+//  Created by Aldo Almeida on 4/9/19.
 //  Copyright © 2019 Life X. All rights reserved.
 //
 
 import UIKit
 
-class Game: UIViewController {
+class mediumGame: UIViewController {
 
- 
+    
+
     @IBAction func backToStart(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "backToHome", sender: self)
+        performSegue(withIdentifier: "backToHome", sender: self)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
