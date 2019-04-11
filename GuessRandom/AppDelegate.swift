@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  GuessRandom
 //
-//  Created by Aldo Almeida on 4/3/19.
+//  Created by Aldo Almeida and Paola Camacho on 4/3/19.
 //  Copyright © 2019 Life X. All rights reserved.
 //
 

@@ -1,8 +1,8 @@
-///Users/aldoalmeida/Library/Autosave Information/GuessRandom/GuessRandom/StartScreen.swift
-//  Game.swift/Users/aldoalmeida/Library/Autosave Information/GuessRandom/GuessRandom/StartScreen.swift
+//
+//  hardGame.swift
 //  GuessRandom
 //
-//  Created by Aldo Almeida on 4/4/19.
+//  Created by Aldo Almeida and Paola Camacho on 4/4/19.
 //  Copyright © 2019 Life X. All rights reserved.
 //
 
