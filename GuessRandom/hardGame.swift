@@ -14,6 +14,9 @@ class hardGame: UIViewController {
     @IBOutlet weak var max: UILabel!
     @IBOutlet weak var input: UITextField!
     @IBOutlet weak var attemptsLeft: UILabel!
+    @IBOutlet weak var decide: UILabel!
+
+    
     
     var minimum:Int=0
     var maxmimum:Int=10
@@ -21,7 +24,7 @@ class hardGame: UIViewController {
     var numOfGuesses=25
 
     
-    @IBAction func backToStart(_ sender: UIButton) {
+    @IBAction func backToStart(sender: UIButton) {
         performSegue(withIdentifier: "backToHome", sender: self)
     }
     override func viewDidLoad() {
@@ -36,8 +39,8 @@ class hardGame: UIViewController {
         
         if(guess==specialNumber)
         {
-            attemptsLeft.text="Winner"
-            
+            decide.text="You Win!"
+            sender.isEnabled=false
         }
         else
         {
@@ -49,7 +52,8 @@ class hardGame: UIViewController {
                 
             else
             {
-                print("lost")
+                decide.text="You lose"
+                sender.isEnabled=false
             }
         }
         

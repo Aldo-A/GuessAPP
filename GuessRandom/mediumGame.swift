@@ -15,6 +15,7 @@ class mediumGame: UIViewController {
     @IBOutlet weak var max: UILabel!
     @IBOutlet weak var input: UITextField!
     @IBOutlet weak var attemptsLeft: UILabel!
+    @IBOutlet weak var decide: UILabel!
     
     var minimum:Int=0
     var maxmimum:Int=10
@@ -38,7 +39,8 @@ class mediumGame: UIViewController {
         
         if(guess==specialNumber)
         {
-            attemptsLeft.text="Winner"
+            decide.text="You Win!"
+            sender.isEnabled=false
             
         }
         else
@@ -51,7 +53,8 @@ class mediumGame: UIViewController {
                 
             else
             {
-                print("lost")
+                decide.text="You lose"
+                sender.isEnabled=false
             }
         }
         
