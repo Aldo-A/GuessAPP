@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyGray" translatesAutoresizingMaskIntoConstraints="NO" id="j0k-Fk-Fqc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j0k-Fk-Fqc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="gUess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtS-Ew-IRI">
@@ -131,14 +131,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJd-wF-nY7">
-                                <rect key="frame" x="185" y="121" width="39" height="59"/>
+                                <rect key="frame" x="172" y="98" width="70" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attempts left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzK-To-rGw">
+                                <rect key="frame" x="20" y="693" width="113" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJ1-Zl-N7y">
+                                <rect key="frame" x="45" y="586" width="88" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjk-X3-SnF">
+                                <rect key="frame" x="236" y="508" width="76" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="25"/>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="getGuess:" destination="ehL-rR-dn1" eventType="touchUpInside" id="Glp-oa-TfP"/>
+                                    <action selector="getGuess:" destination="WOq-yQ-i0r" eventType="touchUpInside" id="k9i-Wp-ehF"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPz-1Z-QEh">
-                                <rect key="frame" x="185" y="281" width="39" height="59"/>
+                                <rect key="frame" x="172" y="257" width="70" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -153,12 +177,16 @@
                         <viewLayoutGuide key="safeArea" id="83E-VZ-AZh"/>
                     </view>
                     <connections>
+                        <outlet property="attemptsLeft" destination="zJ1-Zl-N7y" id="cQK-HV-StT"/>
+                        <outlet property="input" destination="znB-Bs-bVj" id="4FH-G3-6i7"/>
+                        <outlet property="max" destination="uPz-1Z-QEh" id="Fgb-qm-uSo"/>
+                        <outlet property="min" destination="jJd-wF-nY7" id="ktk-mj-CBe"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToHome" id="g46-VR-RNW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GbJ-sf-7M7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1155" y="99"/>
+            <point key="canvasLocation" x="1153.6231884057972" y="98.641304347826093"/>
         </scene>
         <!--Medium Game-->
         <scene sceneID="Wk7-av-zF1">
@@ -207,14 +235,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdw-8u-QkS">
-                                <rect key="frame" x="185" y="123" width="39" height="59"/>
+                                <rect key="frame" x="172" y="100" width="70" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attempts left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjS-zA-Qru">
+                                <rect key="frame" x="20" y="695" width="113" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag0-Zf-KtM">
+                                <rect key="frame" x="39" y="572" width="98" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzh-fC-8b3">
+                                <rect key="frame" x="236" y="510" width="76" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="25"/>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="getGuess:" destination="WOq-yQ-i0r" eventType="touchUpInside" id="Aeb-cn-qgX"/>
+                                    <action selector="getGuess:" destination="AXD-u8-8cd" eventType="touchUpInside" id="LP3-8P-DqI"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueM-x1-8KB">
-                                <rect key="frame" x="185" y="283" width="39" height="59"/>
+                                <rect key="frame" x="172" y="281" width="70" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -229,6 +281,10 @@
                         <viewLayoutGuide key="safeArea" id="B79-vg-OtK"/>
                     </view>
                     <connections>
+                        <outlet property="attemptsLeft" destination="Ag0-Zf-KtM" id="acg-lj-QdT"/>
+                        <outlet property="input" destination="IQU-xy-rzr" id="qrs-Yb-YCn"/>
+                        <outlet property="max" destination="ueM-x1-8KB" id="pqg-PR-YPf"/>
+                        <outlet property="min" destination="gdw-8u-QkS" id="42J-cT-C7s"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToHome" id="NZY-cO-dxm"/>
                     </connections>
                 </viewController>
@@ -283,14 +339,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsq-pJ-NIN">
-                                <rect key="frame" x="185" y="121" width="39" height="59"/>
+                                <rect key="frame" x="169" y="98" width="76" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attempts left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHK-vx-3zX">
+                                <rect key="frame" x="28" y="695" width="113" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ttf-aX-wqT">
+                                <rect key="frame" x="65" y="605" width="56" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vum-Vc-z7M">
+                                <rect key="frame" x="244" y="510" width="76" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="25"/>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="getGuess:" destination="WOq-yQ-i0r" eventType="touchUpInside" id="afQ-dM-IFw"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geJ-Ko-Nbx">
-                                <rect key="frame" x="185" y="281" width="39" height="59"/>
+                                <rect key="frame" x="169" y="241" width="76" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -305,6 +384,10 @@
                         <viewLayoutGuide key="safeArea" id="gmw-Cm-xRm"/>
                     </view>
                     <connections>
+                        <outlet property="attemptsLeft" destination="Ttf-aX-wqT" id="158-E2-Gma"/>
+                        <outlet property="input" destination="cFA-GX-sti" id="y7p-10-rPa"/>
+                        <outlet property="max" destination="geJ-Ko-Nbx" id="2bj-aI-7Rb"/>
+                        <outlet property="min" destination="bsq-pJ-NIN" id="3En-HE-18E"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToHome" id="U0u-hF-jUt"/>
                     </connections>
                 </viewController>
@@ -313,9 +396,6 @@
             <point key="canvasLocation" x="-681.15942028985512" y="98.641304347826093"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="greyGray" width="615" height="461"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="U0u-hF-jUt"/>
     </inferredMetricsTieBreakers>
