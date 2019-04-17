@@ -16,11 +16,12 @@ class mediumGame: UIViewController {
     @IBOutlet weak var input: UITextField!
     @IBOutlet weak var attemptsLeft: UILabel!
     @IBOutlet weak var decide: UILabel!
+    @IBOutlet weak var correctAnswer: UILabel!
     
     var minimum:Int=0
     var maxmimum:Int=10
     var specialNumber:Int=0
-    var numOfGuesses=15
+    var numOfGuesses=10
     
     @IBAction func backToStart(_ sender: UIButton) {
         performSegue(withIdentifier: "backToHome", sender: self)
@@ -45,7 +46,7 @@ class mediumGame: UIViewController {
         }
         else
         {
-            if(numOfGuesses>0)
+            if(numOfGuesses>1)
             {
                 numOfGuesses=numOfGuesses-1
                 attemptsLeft.text=String(numOfGuesses)
@@ -53,6 +54,8 @@ class mediumGame: UIViewController {
                 
             else
             {
+                correctAnswer.text="Correct Number"
+                attemptsLeft.text=String(specialNumber)
                 decide.text="You lose"
                 sender.isEnabled=false
             }

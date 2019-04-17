@@ -15,6 +15,7 @@ class easyGame: UIViewController {
     @IBOutlet weak var input: UITextField!
     @IBOutlet weak var attemptsLeft: UILabel!
     @IBOutlet weak var decide: UILabel!
+    @IBOutlet weak var correctAnswer: UILabel!
     
     var minimum:Int=0
     var maxmimum:Int=10
@@ -32,7 +33,7 @@ class easyGame: UIViewController {
         }
         else
         {
-            if(numOfGuesses>0)
+            if(numOfGuesses>1)
             {
                 numOfGuesses=numOfGuesses-1
                 attemptsLeft.text=String(numOfGuesses)
@@ -40,9 +41,12 @@ class easyGame: UIViewController {
                 
             else
             {
+                correctAnswer.text="Correct Number"
+                attemptsLeft.text=String(specialNumber)
                 decide.text="You lose"
                 sender.isEnabled=false
             }
+            
         }
         
         

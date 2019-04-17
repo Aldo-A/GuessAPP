@@ -16,12 +16,13 @@ class hardGame: UIViewController {
     @IBOutlet weak var attemptsLeft: UILabel!
     @IBOutlet weak var decide: UILabel!
 
+    @IBOutlet weak var correctNumber: UILabel!
     
     
     var minimum:Int=0
     var maxmimum:Int=10
     var specialNumber:Int=0
-    var numOfGuesses=25
+    var numOfGuesses=10
 
     
     @IBAction func backToStart(sender: UIButton) {
@@ -36,7 +37,6 @@ class hardGame: UIViewController {
     
     @IBAction func getGuess(_ sender: UIButton) {
         var guess=Int(input.text!)
-        
         if(guess==specialNumber)
         {
             decide.text="You Win!"
@@ -44,7 +44,7 @@ class hardGame: UIViewController {
         }
         else
         {
-            if(numOfGuesses>0)
+            if(numOfGuesses>1)
             {
                 numOfGuesses=numOfGuesses-1
                 attemptsLeft.text=String(numOfGuesses)
@@ -52,8 +52,11 @@ class hardGame: UIViewController {
                 
             else
             {
+                correctNumber.text="Correct Number"
+                attemptsLeft.text=String(specialNumber)
                 decide.text="You lose"
                 sender.isEnabled=false
+                
             }
         }
         
